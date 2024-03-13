@@ -10,7 +10,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 
-public class ToTakeScreenShot {
+public class VerifyToTakeScreenshot {
     public static void main(String[] args) throws IOException, InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
