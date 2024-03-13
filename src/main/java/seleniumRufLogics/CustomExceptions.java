@@ -1,7 +1,7 @@
 package seleniumRufLogics;
 
-public class CustomExceptions {
-    public static void main(String[] args) {
-
+public class CustomExceptions extends Exception{
+    public CustomExceptions(String message){
+        super(message);
     }
 }

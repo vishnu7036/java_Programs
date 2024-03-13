@@ -1,21 +1,16 @@
 package rufWork;
-
 public class Sample {
     public static void main(String[] args) {
         String ss = "a3b2c4d1e3";
         char[] ch = ss.toCharArray();
-        String letters = "";
-        int num = 0;
-        for (char c : ch) {
+        for (int i = 0; i < ch.length; i++) {
+            char c = ch[i];
             if (Character.isAlphabetic(c)) {
-                letters = letters + c;
-                System.out.print(c);
-            }
-            if (Character.isLetter(c)) {
-                num = num + c;
-                System.out.print(c);
+                int repeatCount = Character.getNumericValue(ch[i + 1]);
+                for (int j = 0; j < repeatCount; j++) {
+                    System.out.print(c);
+                }
             }
         }
     }
 }
-
