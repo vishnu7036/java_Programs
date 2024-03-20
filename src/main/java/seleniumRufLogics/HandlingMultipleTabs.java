@@ -15,6 +15,7 @@ public class HandlingMultipleTabs {
         driver.findElement(By.name("login")).isDisplayed();
         String tab1 = driver.getPageSource();
         System.out.println("Tab1 Page source: "+tab1);
+
         driver.switchTo().newWindow(WindowType.TAB);
         driver.get("https://www.facebook.com/");
         driver.findElement(By.name("login")).isDisplayed();
