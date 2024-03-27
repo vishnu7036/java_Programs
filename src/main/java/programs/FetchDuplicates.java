@@ -10,7 +10,7 @@ public class FetchDuplicates {
                 if(ch[i] == ch[j]){
                     count++;
                     System.out.println("Duplicate characters: "+ch[j]);
-//                    break;
+                    break;
                 }
             }
         }
