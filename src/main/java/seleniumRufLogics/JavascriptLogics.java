@@ -32,6 +32,5 @@ public class JavascriptLogics {
         WebElement ele = driver.findElement(By.xpath("//span[.='Create Page']"));
         boolean b = ele.isDisplayed();
         System.out.println("*******"+b);
-
     }
 }

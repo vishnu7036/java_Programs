@@ -27,6 +27,7 @@ public class HandlingAlerts {
         String text = alert.getText();
         System.out.println(text);
         alert.accept();
+//        alert.dismiss();
 //        driver.quit();
         driver.switchTo().newWindow(WindowType.TAB);
         driver.get("https://www.facebook.com/");

@@ -12,38 +12,45 @@ public class HandlingMultipleTabs {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.facebook.com/");
-        driver.findElement(By.name("login")).isDisplayed();
-        String tab1 = driver.getPageSource();
-        System.out.println("Tab1 Page source: "+tab1);
+        String parentWindow = driver.getWindowHandle();
+        driver.switchTo().newWindow(WindowType.WINDOW);
+        driver.get("https://www.w3schools.com/java/java_class_attributes.asp");
+        driver.switchTo().newWindow(WindowType.WINDOW);
+        driver.get("https://mvnrepository.com/artifact/org.testng/testng");
+        driver.switchTo().window(parentWindow);
 
-        driver.switchTo().newWindow(WindowType.TAB);
-        driver.get("https://www.facebook.com/");
-        driver.findElement(By.name("login")).isDisplayed();
-        String tab2 = driver.getPageSource();
-        System.out.println("Tab1 Page source: "+tab2);
-
-        driver.switchTo().newWindow(WindowType.TAB);
-        driver.get("https://www.facebook.com/");
-        driver.findElement(By.name("login")).isDisplayed();
-        String tab3 = driver.getPageSource();
-        System.out.println("Tab1 Page source: "+tab3);
-
-        driver.switchTo().newWindow(WindowType.TAB);
-        driver.get("https://www.facebook.com/");
-        driver.findElement(By.name("login")).isDisplayed();
-        String tab4 = driver.getPageSource();
-        System.out.println("Tab1 Page source: "+tab4);
-
-        Set<String> windowHandles = driver.getWindowHandles();
-        for(String window : windowHandles){
-            Thread.sleep(2000);
-            WebDriver wi = driver.switchTo().window(window);
-            String pageSource = wi.getPageSource();
-            if(tab2.equals(pageSource)){
-                Thread.sleep(3000);
-                driver.close();
-            }
-
-        }
+//        driver.findElement(By.name("login")).isDisplayed();
+//        String tab1 = driver.getPageSource();
+//        System.out.println("Tab1 Page source: "+tab1);
+//
+//        driver.switchTo().newWindow(WindowType.TAB);
+//        driver.get("https://www.facebook.com/");
+//        driver.findElement(By.name("login")).isDisplayed();
+//        String tab2 = driver.getPageSource();
+//        System.out.println("Tab1 Page source: "+tab2);
+//
+//        driver.switchTo().newWindow(WindowType.TAB);
+//        driver.get("https://www.facebook.com/");
+//        driver.findElement(By.name("login")).isDisplayed();
+//        String tab3 = driver.getPageSource();
+//        System.out.println("Tab1 Page source: "+tab3);
+//
+//        driver.switchTo().newWindow(WindowType.TAB);
+//        driver.get("https://www.facebook.com/");
+//        driver.findElement(By.name("login")).isDisplayed();
+//        String tab4 = driver.getPageSource();
+//        System.out.println("Tab1 Page source: "+tab4);
+//
+//        Set<String> windowHandles = driver.getWindowHandles();
+//        for(String window : windowHandles){
+//            Thread.sleep(2000);
+//            WebDriver wi = driver.switchTo().window(window);
+//            String pageSource = wi.getPageSource();
+//            if(tab2.equals(pageSource)){
+//                Thread.sleep(3000);
+//                driver.close();
+//            }
+//
+//        }
     }
 }
