@@ -16,7 +16,7 @@ public class AnagramProgram {
         Arrays.sort(ch3);
 
         boolean b = Arrays.equals(ch1, ch2) && Arrays.equals(ch1, ch3);
-        String f = b ? "It is Anagram" : "It is not a Anagram";
+        String f = b ? "It is Pro.Anagram" : "It is not a Pro.Anagram";
         System.out.println(f);
     }
 }

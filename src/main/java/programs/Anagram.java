@@ -9,16 +9,18 @@ public class Anagram {
         String s1 = ss[0];
         String s2 = ss[1];
 
-            char[] c1 = s1.toLowerCase().toCharArray();
-            char[] c2 = s2.toLowerCase().toCharArray();
+        char[] c1 = s1.toLowerCase().toCharArray();
+        char[] c2 = s2.toLowerCase().toCharArray();
 
-            Arrays.sort(c1);
-            Arrays.sort(c2);
+        Arrays.sort(c1);
+        System.out.println(c1);
+        Arrays.sort(c2);
+        System.out.println(c2);
 
-            char[] v1 = value.toLowerCase().toCharArray();
-            Arrays.sort(v1);
-            boolean b = Arrays.equals(v1, c1) && Arrays.equals(v1, c2);
-            if (b)
-                System.out.println("given strings are Anagram");
+        char[] v1 = value.toLowerCase().toCharArray();
+        Arrays.sort(v1);
+        boolean b = Arrays.equals(v1, c1) && Arrays.equals(v1, c2);
+        if (b)
+            System.out.println("given strings are Pro.Anagram");
     }
 }

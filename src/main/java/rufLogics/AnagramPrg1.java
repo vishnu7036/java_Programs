@@ -14,6 +14,6 @@ public class AnagramPrg1 {
         Arrays.sort(ch2);
         boolean b = Arrays.equals(ch, ch1) && Arrays.equals(ch, ch2);
         if(b)
-            System.out.println("Given String is Anagram ");
+            System.out.println("Given String is Pro.Anagram ");
     }
 }
