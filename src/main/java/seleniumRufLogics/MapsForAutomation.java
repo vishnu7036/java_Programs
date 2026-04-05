@@ -13,6 +13,7 @@ public class MapsForAutomation {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to("https://www.facebook.com/");
+
         HashMap<String, By> map = new HashMap<>();
         map.put("txtUN", By.id("email"));
         map.put("txtPass",By.id("pass"));

@@ -3,7 +3,8 @@ package rufLogics;
 public class Sample7 {
     //String pattern
     public static void main(String[] args){
-        for(int i =0; i<5; i++){
+        int num = 5;
+        for(int i =0; i<num; i++){
             for(int j=0; j<=i; j++){
                 System.out.print("* ");
             }

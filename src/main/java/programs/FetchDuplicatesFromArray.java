@@ -1,8 +1,6 @@
 package programs;
 
-import java.util.Arrays;
 import java.util.LinkedHashSet;
-import java.util.stream.Stream;
 
 public class FetchDuplicatesFromArray {
     public static void main(String[] args) {
@@ -17,11 +15,11 @@ public class FetchDuplicatesFromArray {
         }
 
 
-//        LinkedHashSet<Integer> lhs = new LinkedHashSet<>();
-//        for(int a : arr){
-//            lhs.add(a);
-//        }
-//        System.out.println(lhs);
+        LinkedHashSet<Integer> lhs = new LinkedHashSet<>();
+        for(int a : arr){
+            lhs.add(a);
+        }
+        System.out.println(lhs);
 //        Stream<Integer> sorted = lhs.stream().sorted();
 ////        System.out.println(sorted);
 //        lhs.stream().sorted().forEach(System.out::println);

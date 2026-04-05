@@ -15,6 +15,7 @@ import java.time.Duration;
 
 public class Sample {
     public static void main(String[] args) throws InterruptedException, AWTException {
+
         ChromeOptions options = new ChromeOptions();
         options.addArguments("disable-notifications");
         WebDriver driver = new ChromeDriver(options);

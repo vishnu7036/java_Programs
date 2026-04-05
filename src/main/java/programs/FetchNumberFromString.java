@@ -13,8 +13,8 @@ public class FetchNumberFromString {
         for(char c: ch){
 //            if(Character.isAlphabetic(c))
 //                System.out.println(c);
-             if(Character.isDigit(c))
-                System.out.println(c);
+             if(Character.isAlphabetic(c))
+                System.out.print(c);
         }
 
 

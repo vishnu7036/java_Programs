@@ -1,6 +1,5 @@
 package programs;
 
-import org.testng.Assert;
 
 public class Palindrome {
     public static void main(String[] args) {
